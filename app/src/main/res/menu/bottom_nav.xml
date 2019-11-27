@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:title="previous"
+        android:icon="@drawable/ic_navigate_before_black_24dp"
+        android:id="@+id/previous"
+        />
+
+    <item
+        android:title="home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:id="@+id/home"
+        />
+
+    <item
+        android:title="next"
+        android:icon="@drawable/ic_navigate_next_black_24dp"
+        android:id="@+id/next"
+        />
+
+</menu>
