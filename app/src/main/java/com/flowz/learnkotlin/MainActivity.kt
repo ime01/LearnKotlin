@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
@@ -15,12 +17,38 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        article.setOnClickListener {
+           openArticle()
+        }
+
         openNext.setOnClickListener {
             val open = Intent(this, Main2Activity::class.java )
             startActivity(open)
         }
 
+        openWeb.setOnClickListener {
+            val openWeb = Intent(this, WebViewActivity::class.java )
+            startActivity(openWeb)
+        }
     }
+
+//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+//        menuInflater.inflate(R.menu.article_menu, menu)
+//        return true
+//    }
+
+//    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+//        when (item!!.itemId) {
+//            R.id.article->openArticle()
+//        }
+//        return super.onOptionsItemSelected(item)
+//    }
+//
+    private fun openArticle() {
+        val openTheArticle =  Intent(this, ArticleActivity::class.java )
+        startActivity(openTheArticle)
+    }
+
     fun Calc(v: View){
         val n1 = findViewById<EditText>(R.id.numberOne)
         val n2 = findViewById<EditText>(R.id.numberTwo)
